@@ -11,5 +11,11 @@ class Kategori extends Model
     protected $table = 'kategoris';
     protected $primaryKey = 'id_categories';
     public $incrementing = true;
-    protected $fillable = ['photo', 'categories', 'description','price'];
+    protected $fillable = ['gambar', 'nama', 'deskripsi','harga'];
+    public $timestamps = false;
+    
+    public function informasi()
+    {
+        return $this->hasMany(Informasi::class, 'category_id', 'id_categories');
+    }
 }

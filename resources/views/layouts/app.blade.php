@@ -36,6 +36,10 @@
 					sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
 				} else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 			};
+      function showDetails( nama, kategori,seat, harga, status) {
+         let nomorhp = event.target.getAttribute('data-nomorhp');
+         alert(`Nama: ${nama}\nKategori: ${kategori}\nSeat: ${seat}\nHarga: ${harga}\nNomor HP: ${nomorhp}\nStatus: ${status}`);
+      }
   </script>
 </body>
 
